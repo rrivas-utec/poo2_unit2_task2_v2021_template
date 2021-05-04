@@ -83,7 +83,7 @@ Crear la clase template **`smart_ptr`** que simule un puntero inteligente (la me
         point() = default;
         
         friend ostream& operator<< (ostream& os, const point& p) {
-            os << "{" << x <<", " << y << "}" << endl;
+            os << "{" << p.x <<", " << p.y << "}" << endl;
             return os;
         }
 
