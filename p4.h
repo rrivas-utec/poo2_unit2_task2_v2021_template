@@ -23,7 +23,7 @@ public:
     point() = default;
 
     friend ostream& operator<< (ostream& os, const point& p) {
-        os << "{" << x <<", " << y << "}" << endl;
+        os << "{" << p.x <<", " << p.y << "}" << endl;
         return os;
     }
 
