@@ -21,8 +21,13 @@ void question_2_1(){
 void question_2_2(){
 #ifdef ENABLE_TEST
     vector<int> vec = {10, 20, 40, 11, 22, 54};
-    ofstream file ("out.txt");
-    print(begin(vec), end(vec), file, "|");
+    ofstream in ("result.txt");
+    print(begin(vec), end(vec), in, "|");
+    in.close();
+    ifstream out ("result.txt");
+    string result;
+    getline(out, result);
+    cout << result;
 #endif
 }
 
@@ -36,8 +41,13 @@ void question_2_3(){
 
 void question_2_4(){
 #ifdef ENABLE_TEST
-    list<int> vec = {10, 20, 40, 11, 22, 54};
-    ofstream file ("out.txt");
-    print(begin(vec), end(vec), file, "|");
+    list<int> lst = {};
+    ofstream in ("result.txt");
+    print(begin(lst), end(lst), in, "|");
+    in.close();
+    ifstream out ("result.txt");
+    string result;
+    getline(out, result);
+    cout << result;
 #endif
 }
